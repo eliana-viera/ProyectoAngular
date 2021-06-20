@@ -1,0 +1,117 @@
+{
+    "empleado": [{
+        "id": 1,
+        "nombre": "Juan Perez",
+        "edad": 25
+    },
+    {
+        "id": 2,
+        "nombre": "Maria Gomez",
+        "edad": 35
+    },
+    {
+        "id": 3,
+        "nombre": "Ana Lopez",
+        "edad": 42
+    },
+    {
+        "id": 4,
+        "nombre": "Andrea Rodriguez",
+        "edad": 33
+    },
+    {
+        "id": 5,
+        "nombre": "Mario Gonzalez",
+        "edad": 29
+    }
+],
+
+    "usuario": [{
+        "id": 1,
+        "email": "ana@mail.com",
+        "descripcion": "12346",
+        "rol": "admin"
+    },
+    {
+        "id": 2,
+        "email": "maria@mail.com",
+        "descripcion": "abcde12",
+        "rol": "empleado"
+    },
+    {
+    "id": 3,
+    "email": "juan@mail.com",
+    "descripcion": "aaa234",
+    "rol": "empleado"
+}],
+
+    "producto": [{
+            "id": 1,
+            "codigo": "S100",
+            "nombre": "Shampoo Dove",
+            "descripcion": "Shampoo Dove cabello seco",
+            "precio": 250,
+            "imagenUrl": "https://geant.vteximg.com.br/arquivos/ids/255255-700-700/633927.jpg?v=637318154421270000"
+        },
+        {
+            "id": 2,
+            "codigo": "S200",
+            "nombre": "Shampoo Pantene",
+            "descripcion": "Shampoo Pantene cabello normal",
+            "precio": 350,
+            "imagenUrl": "https://www.saul.com.uy/content/images/thumbs/0026850_4d01ad31d6f64f3434970b5eb6eb2995ca554c1425049b743b32ddd7a25c13b4_450.jpeg"
+        },
+        {
+            "id": 3,
+            "codigo": "A100",
+            "nombre": "Acondicionador Head & Shoulders",
+            "descripcion": "Acondicionador Head & Shoulders cabello seco",
+            "precio": 280,
+            "imagenUrl": "https://www.botiga.com.uy/media/catalog/product/cache/1/image/600x600/0dc2d03fe217f8c83829496872af24a0/1/7/170.png"
+        },
+        {
+            "id": 4,
+            "codigo": "T100",
+            "nombre": "Tratamiento Loreal",
+            "descripcion": "Tratamiento Loreal para cabello seco",
+            "precio": 1050,
+            "imagenUrl": "https://www.lorealprofessionnel.uy/-/media/master/zal/products/packshotphoto/hair-care/aboslut_repair/packshot_serieexpert_arl_shampooing.ashx?w=420&hash=978945E52867C452FA5A41BAED9A33184A0CDA7A"
+        },
+        {
+            "id": 5,
+            "codigo": "T100",
+            "nombre": "Tratamiento Kerastase",
+            "descripcion": "Tratamiento Kerastase cabello normal",
+            "precio": 1390,
+            "imagenUrl": "https://geant.vteximg.com.br/arquivos/ids/255255-700-700/633927.jpg?v=637318154421270000"
+        }
+    ],
+    "servicio": [{
+        "id": 1,
+        "nombre": "Corte de cabello Dama",
+        "descripcion": "Corte de cabello para Dama",
+        "precio": 350,
+        "imagenUrl": "https://www.hola.com/imagenes//belleza/tendencias/2013091867060/pelo-cortar/0-247-248/cortar-pelo--z.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Brushing",
+        "descripcion": "Brushing cabello largo",
+        "precio": 420,
+        "imagenUrl": "https://www.nexofin.com/archivos/2020/07/fotolia_178874859_m.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Tinta cabello largo",
+        "descripcion": "Tinta para cabello largo",
+        "precio": 690,
+        "imagenUrl": "https://botoxcapilar.org/wp-content/uploads/2019/11/aplicar-tinte-con-pincel.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Planchita",
+        "descripcion": "Planchita cabello largo",
+        "precio": 950,
+        "imagenUrl": "https://www.65ymas.com/uploads/s1/92/10/5/cual-es-la-forma-mas-eficaz-de-usar-las-planchas-de-pelo.jpeg"
+    }
+]}
