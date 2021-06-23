@@ -1,0 +1,18 @@
+<div class="row" style="background: white;padding:15px 15px;margin: 0;">
+    <form class="row gy-2 gx-3 align-items-center" style="width:50%">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" [(ngModel)]="empleado.nombre" class="form-control" name="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="text" [(ngModel)]="empleado.edad" class="form-control" name="edad">
+        </div>
+        <div class="mb-3">
+            <label for="cargo" class="form-label">Cargo</label>
+            <input type="text" [(ngModel)]="empleado.cargo" class="form-control" name="cargo">
+        </div>
+      <button type="submit" (click)="save($event)" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+

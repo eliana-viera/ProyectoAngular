@@ -1,0 +1,18 @@
+<div class="card" style="width: 14rem;margin:8px">
+    <img [src]="servicio.imagen" width="70" height="140" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h6 class="card-title">{{servicio.nombre | uppercase}}</h6>
+        <p class="card-text">{{servicio.descripcion}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>{{servicio.precio}} $</strong></li>
+    </ul>
+    <div class="qty">
+        <a (click)="Agregar()" class="btn btn-danger"><i class="bi bi-plus"></i></a>
+        <input type="text" [(ngModel)]="cantidad" style="width: 35px; margin: 2px 5px; text-align: center;">
+        <a (click)="Quitar()" class="btn btn-danger"><i class="bi bi-file-minus"></i></a>
+    </div>
+    <div class="card-body">
+        <a (click)="Comprar(servicio)" class="btn btn-primary card-link"><i class="bi bi-cart"></i></a>
+    </div>
+</div>

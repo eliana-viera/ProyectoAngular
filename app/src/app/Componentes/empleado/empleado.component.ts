@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Empleado } from 'src/app/clases/empleado';
+import { EmpleadoService } from 'src/app/servicios/empleado.service';
 
 @Component({
   selector: 'app-empleado',
@@ -7,9 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpleadoComponent implements OnInit {
 
-  constructor() { }
+  columnas = [
+    'nombre',
+    'edad',
+    'cargo'
+  ]
+  empleados: Empleado[] = []
+  constructor(private empleadoService: EmpleadoService,private router: Router) { }
 
   ngOnInit(): void {
+    this.empleadoService.getAll().subscribe(response =>{
+      this.empleados = response;
+      console.log(this.empleados)
+    })
+  }
+
+  modificarEmpleado(empleado:Empleado){
+    this.router.navigate(["/agregar-empleado",empleado.id])
+  }
+
+  eliminarEmpleado(id: number){
+    this.empleadoService.eliminarEmpleado(id).subscribe((response:any)=>{
+      console.log(response)
+      const nuevoItems = this.empleados.filter((item:any)=>{
+        return item.id !== id
+      });
+      this.empleados = nuevoItems;
+    })
   }
 
 }

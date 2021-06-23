@@ -14,10 +14,15 @@ import { EmpleadoService } from './Servicios/empleado.service';
 import { ServicioService } from './Servicios/servicio.service';
 import { UsuarioService } from './Servicios/usuario.service';
 import { InicioComponent } from './inicio/inicio.component';
-import { ComprasComponent } from './Negocio/compras/compras.component';
-import { VentasComponent } from './Negocio/ventas/ventas.component';
-import { ListaProductosComponent } from './Componentes/lista-productos/lista-productos.component';
-import { ListaServiciosComponent } from './Componentes/lista-servicios/lista-servicios.component';
+import { AgregarProductoComponent } from './componentes/producto/agregar-producto/agregar-producto.component';
+import { AgregarEmpleadoComponent } from './componentes/empleado/agregar-empleado/agregar-empleado.component';
+import { AgregarUsuarioComponent } from './componentes/usuario/agregar-usuario/agregar-usuario.component';
+import { AgregarServicioComponent } from './componentes/servicio/agregar-servicio/agregar-servicio.component';
+import { VentaProductoComponent } from './Negocio/venta-producto/venta-producto.component';
+import { VentaServicioComponent } from './Negocio/venta-servicio/venta-servicio.component';
+import { FiltroProductoComponent } from './negocio/filtro-producto/filtro-producto.component';
+import { FiltroServicioComponent } from './negocio/filtro-servicio/filtro-servicio.component';
+import { CajaComponent } from './Negocio/caja/caja.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,10 +31,15 @@ import { ListaServiciosComponent } from './Componentes/lista-servicios/lista-ser
     ServicioComponent,
     UsuarioComponent,
     InicioComponent,
-    ComprasComponent,
-    VentasComponent,
-    ListaProductosComponent,
-    ListaServiciosComponent
+    AgregarProductoComponent,
+    AgregarEmpleadoComponent,
+    AgregarUsuarioComponent,
+    AgregarServicioComponent,
+    VentaProductoComponent,
+    VentaServicioComponent,
+    FiltroProductoComponent,
+    FiltroServicioComponent,
+    CajaComponent
    
   ],
   imports: [

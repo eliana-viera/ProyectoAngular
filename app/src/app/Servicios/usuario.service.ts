@@ -1,13 +1,12 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Usuario } from '../clases/usuario';
-
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-  url = "http://localhost:3000/servicio"
+  url = "http://localhost:3000/usuario"
   
 
   constructor(private _http: HttpClient) {
@@ -22,7 +21,7 @@ export class UsuarioService {
      return this._http.post(this.url, usuario);
    }
 
-   eliminarUusuario(id:number){
+   eliminarUsuario(id:number){
      return this._http.delete(this.url+"/"+id);
    }
 

@@ -1,0 +1,17 @@
+<div class="row" style="background: wheat;padding:15px 15px;margin: 0;">
+    <form class="row gy-2 gx-3 align-items-center" style="width:50%">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" [(ngModel)]="usuario.email" class="form-control" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" [(ngModel)]="usuario.password" class="form-control" name="password">
+        </div>
+        <div class="mb-3">
+            <label for="rol" class="form-label">Rol</label>
+            <input type="text" [(ngModel)]="usuario.rol" class="form-control" name="rol">
+        </div>
+      <button type="submit" (click)="save($event)" class="btn btn-primary">Guardar</button>
+    </form>
+</div>

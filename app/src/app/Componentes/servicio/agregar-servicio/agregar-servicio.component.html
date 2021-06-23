@@ -1,0 +1,22 @@
+<div class="row" style="background: white;padding:15px 15px;margin: 0;">
+    <form class="row gy-2 gx-3 align-items-center" style="width:50%">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" [(ngModel)]="servicio.nombre" class="form-control" name="nombre">
+        </div>
+        <div class="input-group mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <span class="input-group-text">$</span>
+            <input type="text" [(ngModel)]="servicio.precio" class="form-control" name="precio" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="text" [(ngModel)]="servicio.imagen" class="form-control" name="imagen">
+        </div>
+        <div class="mb-3">
+            <textarea name="descripcion" [(ngModel)]="servicio.descripcion" placeholder="Descripcion" name="descripcion" cols="78" rows="10"></textarea>
+        </div>
+
+        <button type="submit" (click)="save($event)" class="btn btn-primary">Guardar</button>
+    </form>
+</div>

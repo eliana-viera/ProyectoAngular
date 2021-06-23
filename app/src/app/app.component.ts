@@ -33,6 +33,21 @@ export class AppComponent {
       nombre:"Servicios",
       enlace:"/servicio",
       class:"nav-link"
+    },
+    {
+      nombre:"Vender Producto",
+      enlace:"/filtro-producto",
+      class:"nav-link"
+    },
+    {
+      nombre:"Vender Servicio",
+      enlace:"/filtro-servicio",
+      class:"nav-link"
+    },
+    {
+      nombre:"Caja",
+      enlace:"/caja",
+      class:"nav-link"
     }
   ]
 }

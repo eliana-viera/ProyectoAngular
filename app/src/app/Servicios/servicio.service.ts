@@ -14,7 +14,7 @@ export class ServicioService {
 
    }
 
-   getAll(){
+   todos(){
      return this._http.get<Servicio[]>(this.url);
    }
 

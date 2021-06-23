@@ -1,0 +1,36 @@
+<div class="row" style="background: white;padding:15px 15px;margin: 0;">
+    <div class="col">
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" (input)="handle()" placeholder="Precio desde" class="form-control" [(ngModel)]="desde" aria-label="Amount (to the nearest dollar)">
+        </div>
+    </div>
+    <div class="col">
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" (input)="handle()" placeholder="Precio hasta" class="form-control" [(ngModel)]="hasta" aria-label="Amount (to the nearest dollar)">
+        </div>
+    </div>
+    <div class="col">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" (input)="handle()" class="form-control" [(ngModel)]="nombre" placeholder="Nombre"  aria-describedby="basic-addon1">
+        </div>
+    </div>
+    <div class="col">
+        <button class="btn btn-outline-success" (click)="filtrar()"><i class="bi bi-search"></i></button>
+        <button *ngIf="mostrarEliminar" class="btn btn-outline-success" (click)="limpiar()"><i class="bi bi-trash"></i></button>
+    </div>
+</div>
+<div class="lista-col">
+    <div *ngIf="servicios.length === 0" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Servicios</h1>
+            <p class="lead">No se encontraron servicios</p>
+        </div>
+    </div>
+    <div *ngFor="let servicio of servicios">
+        <app-venta-servicio [servicio]="servicio"></app-venta-servicio>
+    </div>
+</div>
+

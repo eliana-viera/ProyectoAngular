@@ -1,1 +1,24 @@
-<p>empleado works!</p>
+<div class="row" style="background: white;padding:15px 15px;margin: 0;">
+    <h3><a [routerLink]="['/agregar-empleado',0]" class="btn btn-primary">Agregar Empleado</a></h3>
+    <div class="row">
+        <input placeholder="Buscar" type="text">
+    </div>
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" *ngFor="let item of columnas">{{item | uppercase}}</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of empleados">
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.edad}}</td>
+                    <td>{{item.cargo}}</td>
+                    <td><a (click)="modificarEmpleado(item)" class="btn btn-primary"><i class="bi bi-pencil"></i></a><a (click)="eliminarEmpleado(item.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
