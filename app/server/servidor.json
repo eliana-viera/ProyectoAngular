@@ -1,12 +1,6 @@
 {
   "empleado": [
     {
-      "id": 2,
-      "nombre": "Maria Gomez",
-      "edad": 35,
-      "cargo": "Cajera"
-    },
-    {
       "id": 3,
       "nombre": "Ana Lopez",
       "edad": 42,
@@ -71,14 +65,6 @@
   ],
   "producto": [
     {
-      "id": 1,
-      "codigo": "S100",
-      "nombre": "Shampoo Dove",
-      "descripcion": "Shampoo Dove cabello seco",
-      "precio": 250,
-      "imagen": "https://geant.vteximg.com.br/arquivos/ids/255255-700-700/633927.jpg?v=637318154421270000"
-    },
-    {
       "id": 2,
       "codigo": "S200",
       "nombre": "Shampoo Pantene",
@@ -139,6 +125,13 @@
       "descripcion": "Alisado progresivo sin formol",
       "precio": "3000",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_822221-MLU44761062039_012021-O.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "dkss",
+      "descripcion": "jwej",
+      "precio": "384938",
+      "imagen": ""
     }
   ]
 }

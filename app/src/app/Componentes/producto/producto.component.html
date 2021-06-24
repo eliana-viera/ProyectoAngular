@@ -1,7 +1,7 @@
 <div class="row" style="padding:15px 15px;margin: 0;">
     <h3><a [routerLink]="['/agregar-producto',0]" class="btn btn-primary">Crear Producto</a></h3>
     <div class="row">
-        <input placeholder="Buscar por código" (input)="handle()" [(ngModel)]="codigo" type="text"> 
+        <input placeholder="Buscar por nombre" (input)="handle()" [(ngModel)]="nombre" type="text"> 
         <div class="col">
             <button class="btn btn-outline-success" (click)="buscar()"><i class="bi bi-search"></i></button>
             <button *ngIf="mostrarEliminar" class="btn btn-outline-success" (click)="limpiar()"><i class="bi bi-trash"></i></button>

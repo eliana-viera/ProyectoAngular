@@ -18,7 +18,7 @@ export class ProductoComponent implements OnInit {
     'precio'
   ]
   productos: Producto[] = []
-  codigo="";
+  nombre="";
   mostrarEliminar = false;
   backup: Producto[] = [];
 
@@ -32,9 +32,9 @@ export class ProductoComponent implements OnInit {
   }
 
   buscar(){
-    if(this.codigo.length > 0){
+    if(this.nombre.length > 0){
       let filtroProducto = this.productos.filter(producto =>{
-        return producto.codigo.toLowerCase() === this.codigo.toLowerCase();
+        return producto.nombre.toLowerCase().includes(this.nombre.toLowerCase());
       });
       this.productos = filtroProducto;
     };
@@ -42,7 +42,7 @@ export class ProductoComponent implements OnInit {
 
   limpiar(){
     this.mostrarEliminar= false;
-    this.codigo = "",
+    this.nombre = "",
     this.productos = this.backup;
   }
 
