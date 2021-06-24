@@ -29,6 +29,10 @@ export class LoginService {
         localStorage.setItem("user",JSON.stringify(user));
         this.rout.navigate(['/'])
       }
+      else
+      {
+        alert("Usuario o contraseña incorrectos")
+      }
     });
   }
 
