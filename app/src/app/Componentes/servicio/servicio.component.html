@@ -1,7 +1,11 @@
-<div class="row" style="background: white;padding:15px 15px;margin: 0;">
+<div class="row" style="padding:15px 15px;margin: 0;">
     <h3><a [routerLink]="['/agregar-servicio',0]" class="btn btn-primary">Crear Servicio</a></h3>
     <div class="row">
-        <input placeholder="Buscar" type="text">
+        <input placeholder="Buscar por nombre" (input)="handle()" [(ngModel)]="nombre" type="text"> 
+        <div class="col">
+            <button class="btn btn-outline-success" (click)="buscar()"><i class="bi bi-search"></i></button>
+            <button *ngIf="mostrarEliminar" class="btn btn-outline-success" (click)="limpiar()"><i class="bi bi-trash"></i></button>
+        </div>
     </div>
     <div class="col">
         <table class="table">

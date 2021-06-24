@@ -1,11 +1,32 @@
-<div class="card text-center">
-  <div class="card-header">
+<div class="pos-f-t">
     <ul class="nav nav-tabs card-header-pills">
-        <li class="nav-item" *ngFor="let item of menu">
-            <a class="{{item.class}}" [routerLink]="item.enlace">{{item.nombre}}</a>
+        <li class="nav-item" >
+            <a class="nav-link active" *ngIf="_loginService.getUser() != 'default'" [routerLink]="'/'" aria-current="page">Inicio</a>
         </li>
-    </ul>
-  </div>
+        <li class="nav-item" *ngIf="_loginService.getUser() == 'administrador'">
+            <a class="nav-link" [routerLink]="'/usuario'" aria-current="page">Usuario</a>
+        </li>
+        <li class="nav-item" *ngIf="_loginService.getUser() == 'administrador'">
+            <a class="nav-link" [routerLink]="'/empleado'" aria-current="page">Empleados</a>
+        </li>
+          <li class="nav-item" *ngIf="_loginService.getUser() == 'administrador'">
+            <a class="nav-link" [routerLink]="'/producto'" aria-current="page">Productos</a>
+        </li>
+        <li class="nav-item" *ngIf="_loginService.getUser() == 'administrador'">
+          <a class="nav-link" [routerLink]="'/servicio'" aria-current="page">Servicios</a>
+      </li>
+      <li class="nav-item" *ngIf="_loginService.getUser() == 'usuario'">
+          <a class="nav-link" [routerLink]="'/filtro-producto'" aria-current="page">Vender Producto</a>
+      </li>
+      <li class="nav-item" *ngIf="_loginService.getUser() == 'usuario'">
+          <a class="nav-link" [routerLink]="'/filtro-servicio'" aria-current="page">Vender Servicio</a>
+      </li>
+      <li class="nav-item" *ngIf="_loginService.getUser() == 'usuario'" >
+        <a class="nav-link" [routerLink]="'/caja'" aria-current="page">Caja</a>
+      </li>
+     <button class="btn btn-outline-danger"  *ngIf="_loginService.getUser() != 'default'" (click)="logout()">Salir</button>
+  </ul>
+</div>
 <div class="container">
   <router-outlet></router-outlet>
 </div>

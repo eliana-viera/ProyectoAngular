@@ -18,13 +18,36 @@ export class ProductoComponent implements OnInit {
     'precio'
   ]
   productos: Producto[] = []
+  codigo="";
+  mostrarEliminar = false;
+  backup: Producto[] = [];
+
   constructor(private productoService: ProductoService,private _router: Router) { }
 
   ngOnInit(): void {
     this.productoService.getAll().subscribe(response =>{
       this.productos = response;
-      console.log(this.productos)
+      this.backup = this.productos;
     })
+  }
+
+  buscar(){
+    if(this.codigo.length > 0){
+      let filtroProducto = this.productos.filter(producto =>{
+        return producto.codigo.toLowerCase() === this.codigo.toLowerCase();
+      });
+      this.productos = filtroProducto;
+    };
+  }
+
+  limpiar(){
+    this.mostrarEliminar= false;
+    this.codigo = "",
+    this.productos = this.backup;
+  }
+
+  handle(){
+    this.mostrarEliminar = true;
   }
 
   modificarProducto(producto:Producto){

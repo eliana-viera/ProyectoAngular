@@ -14,6 +14,7 @@ import { FiltroServicioComponent } from './Negocio/filtro-servicio/filtro-servic
 import { FiltroProductoComponent } from './Negocio/filtro-producto/filtro-producto.component';
 import { CajaComponent } from './Negocio/caja/caja.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'',component: InicioComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'filtro-producto',component:FiltroProductoComponent},
   {path:'filtro-servicio',component:FiltroServicioComponent},
   {path:'venta-servicio',component:VentaServicioComponent},
-  {path:'caja',component:CajaComponent}
+  {path:'caja',component:CajaComponent},
+  {path:'login',component:LoginComponent}
 
 ];
 

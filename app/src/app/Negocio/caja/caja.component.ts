@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-caja',
@@ -23,7 +24,8 @@ cambio = 0;
 monto = 0;
 productos: string[] = []
 carritoProductos : any = []
-constructor() { }
+
+constructor(private rout: Router) { }
 
 ngOnInit(): void {
   this.productos = Object.keys(sessionStorage);
@@ -99,7 +101,7 @@ finalizarCompra(){
     sessionStorage.removeItem(el);
   });
   this.productos = [];
-
+  this.rout.navigate(['/'])
 }
 
 eliminarItem(producto: any){

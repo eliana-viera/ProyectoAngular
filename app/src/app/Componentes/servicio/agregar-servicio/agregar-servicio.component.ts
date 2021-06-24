@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Servicio } from 'src/app/clases/servicio';
 import { ServicioService } from 'src/app/servicios/servicio.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agregar-servicio',
@@ -11,7 +12,7 @@ import { ServicioService } from 'src/app/servicios/servicio.service';
 export class AgregarServicioComponent implements OnInit {
 
   servicio: Servicio = new Servicio();
-  constructor(private servicioService: ServicioService, private activedRoute: ActivatedRoute) { }
+  constructor(private rout: Router, private servicioService: ServicioService, private activedRoute: ActivatedRoute) { }
   id = 0;
   ngOnInit(): void { 
       this.activedRoute.paramMap.subscribe((item:any)=>{
@@ -32,12 +33,16 @@ export class AgregarServicioComponent implements OnInit {
     if(this.id > 0){
       this.servicioService.modificarServicio(this.servicio).subscribe((response:any)=>{
         console.log(response);
+        alert("Modificado con éxito")
+        this.rout.navigate(['/servicio'])
       });
     }
     else{
       this.servicioService.insertarServicio(this.servicio).subscribe((response:any)=>{
         console.log(response);
         this.cleanFormData();
+        alert("Agregado con éxito")
+        this.rout.navigate(['/servicio'])
       });
     }
 

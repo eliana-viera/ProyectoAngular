@@ -16,13 +16,36 @@ export class EmpleadoComponent implements OnInit {
     'cargo'
   ]
   empleados: Empleado[] = []
+  nombre = ""
+  mostrarEliminar = false
+  backup : Empleado[] = []
+
   constructor(private empleadoService: EmpleadoService,private router: Router) { }
 
   ngOnInit(): void {
     this.empleadoService.getAll().subscribe(response =>{
       this.empleados = response;
-      console.log(this.empleados)
+      this.backup = this.empleados;
     })
+  }
+
+  buscar(){
+    if(this.nombre.length > 0){
+      let filtroEmp = this.empleados.filter(empleado =>{
+        return empleado.nombre.toLowerCase() === this.nombre.toLowerCase();
+      });
+      this.empleados = filtroEmp;
+    };
+  }
+
+  limpiar(){
+    this.mostrarEliminar= false;
+    this.nombre = "",
+    this.empleados = this.backup;
+  }
+
+  handle(){
+    this.mostrarEliminar = true;
   }
 
   modificarEmpleado(empleado:Empleado){

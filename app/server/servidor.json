@@ -23,6 +23,12 @@
       "nombre": "Mario Gonzalez",
       "edad": 29,
       "cargo": "Administrativo"
+    },
+    {
+      "id": 6,
+      "nombre": "Pepe Lopez",
+      "edad": "85",
+      "cargo": "colorista"
     }
   ],
   "usuario": [
@@ -43,6 +49,24 @@
       "email": "maria@mail.com",
       "password": "abcde123",
       "rol": "usuario"
+    },
+    {
+      "id": 4,
+      "email": "pepe@mail.com",
+      "password": "123admin",
+      "rol": "usuario"
+    },
+    {
+      "id": 5,
+      "email": "casa@mail.com",
+      "password": "123admin",
+      "rol": "administrador"
+    },
+    {
+      "id": 6,
+      "email": "mario@mail.comasas",
+      "password": "123admin",
+      "rol": "asasas"
     }
   ],
   "producto": [
@@ -65,8 +89,8 @@
     {
       "id": 3,
       "codigo": "A100",
-      "nombre": "Acondicionador Head & Shoulders",
-      "descripcion": "Acondicionaadasdasdasd",
+      "nombre": "Acondicionador Dove",
+      "descripcion": "Acondicionador",
       "precio": 280,
       "imagen": "https://www.botiga.com.uy/media/catalog/product/cache/1/image/600x600/0dc2d03fe217f8c83829496872af24a0/1/7/170.png"
     },
@@ -108,6 +132,13 @@
       "descripcion": "Planchita cabello largo",
       "precio": 950,
       "imagen": "https://www.65ymas.com/uploads/s1/92/10/5/cual-es-la-forma-mas-eficaz-de-usar-las-planchas-de-pelo.jpeg"
+    },
+    {
+      "id": 5,
+      "nombre": "Progresivo",
+      "descripcion": "Alisado progresivo sin formol",
+      "precio": "3000",
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_822221-MLU44761062039_012021-O.jpg"
     }
   ]
 }

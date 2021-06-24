@@ -13,6 +13,7 @@ import { ProductoService } from './Servicios/producto.service';
 import { EmpleadoService } from './Servicios/empleado.service';
 import { ServicioService } from './Servicios/servicio.service';
 import { UsuarioService } from './Servicios/usuario.service';
+import { LoginService } from './Servicios/login.service';
 import { InicioComponent } from './inicio/inicio.component';
 import { AgregarProductoComponent } from './componentes/producto/agregar-producto/agregar-producto.component';
 import { AgregarEmpleadoComponent } from './componentes/empleado/agregar-empleado/agregar-empleado.component';
@@ -23,6 +24,7 @@ import { VentaServicioComponent } from './Negocio/venta-servicio/venta-servicio.
 import { FiltroProductoComponent } from './negocio/filtro-producto/filtro-producto.component';
 import { FiltroServicioComponent } from './negocio/filtro-servicio/filtro-servicio.component';
 import { CajaComponent } from './Negocio/caja/caja.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,8 @@ import { CajaComponent } from './Negocio/caja/caja.component';
     VentaServicioComponent,
     FiltroProductoComponent,
     FiltroServicioComponent,
-    CajaComponent
+    CajaComponent,
+    LoginComponent
    
   ],
   imports: [
@@ -53,7 +56,8 @@ import { CajaComponent } from './Negocio/caja/caja.component';
   ProductoService,
   EmpleadoService,
   ServicioService,
-  UsuarioService
+  UsuarioService, 
+  LoginService
   ],
   bootstrap: [AppComponent]
 })

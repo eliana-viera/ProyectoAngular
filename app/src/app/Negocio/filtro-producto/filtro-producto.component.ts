@@ -34,7 +34,6 @@ export class FiltroProductoComponent implements OnInit {
   }
 
   filtrar(){
-
     if(this.codigo.length > 0){
       let filtroProducto = this.productos.filter(producto =>{
         return producto.codigo.toLowerCase() === this.codigo.toLowerCase();

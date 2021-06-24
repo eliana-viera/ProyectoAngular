@@ -17,13 +17,38 @@ export class ServicioComponent implements OnInit {
     'precio'
   ]
   servicios: Servicio[] = []
+
+  nombre="";
+  mostrarEliminar = false;
+  backup: Servicio[] = [];
+
   constructor(private servicioService: ServicioService,private _router: Router) { }
 
   ngOnInit(): void {
     this.servicioService.todos().subscribe(response =>{
       this.servicios = response;
-      console.log(this.servicios)
+      this.backup = this.servicios;
     })
+  }
+
+  
+  buscar(){
+    if(this.nombre.length > 0){
+      let filtroServ= this.servicios.filter(servicio =>{
+        return servicio.nombre.toLowerCase() === this.nombre.toLowerCase();
+      });
+      this.servicios = filtroServ;
+    };
+  }
+
+  limpiar(){
+    this.mostrarEliminar= false;
+    this.nombre = "",
+    this.servicios = this.backup;
+  }
+
+  handle(){
+    this.mostrarEliminar = true;
   }
 
   modificarServicio(servicio:Servicio){
